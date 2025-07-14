@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "name": "blog-summarizer",
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/next"
+    }
+  ],
+  "env": {
+    "NEXT_PUBLIC_SUPABASE_URL": "@supabase_url",
+    "SUPABASE_SERVICE_ROLE_KEY": "@supabase_service_key",
+    "MONGODB_URI": "@mongodb_uri"
+  }
+}
