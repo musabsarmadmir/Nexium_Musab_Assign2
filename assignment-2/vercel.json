@@ -1,7 +1,6 @@
 {
   "version": 2,
   "name": "blog-summarizer",
-  "description": "A modern Next.js application that extracts content from blog URLs, generates AI-powered summaries, and provides Urdu translations with dual database storage (Supabase + MongoDB).",
   "builds": [
     {
       "src": "package.json",
