@@ -26,8 +26,10 @@ export async function POST(request: NextRequest) {
     // Step 2: Generate summary using static logic
     const summary = generateSummary(originalText)
 
-    // Step 3: Translate summary to Urdu
-    const urduSummary = translateToUrdu(summary)
+    // Step 3: Translate summary to Urdu using LLM
+    const urduSummary = await translateToUrdu(summary)
+    // The translation will automatically use the best available model
+    // You can also specify a model: await translateToUrdu(summary, { model: 'llama' })
 
     // Step 4: Save to databases
     const summaryId = `summary_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`

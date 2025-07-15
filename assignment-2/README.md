@@ -42,15 +42,17 @@ A Next.js application that extracts content from blog URLs, generates summaries,
 
 - 🌐 **URL Content Extraction** - Scrape blog content from any URL
 - 📝 **AI Summarization** - Generate concise summaries
-- 🌍 **Urdu Translation** - Automatic translation to Urdu
+- 🌍 **LLM-Powered Urdu Translation** - AI translation using Gemini or Llama models
 - 💾 **Dual Storage** - Supabase + MongoDB integration
 - 🎨 **Modern UI** - Beautiful interface with dark/light mode
 - 📱 **Responsive** - Works on all devices
+- 🔄 **Fallback System** - Dictionary backup for translation reliability
 
 ## Tech Stack
 
 - **Frontend**: Next.js 14, React, TypeScript, Tailwind CSS, shadcn/ui
 - **Backend**: Next.js API Routes, Supabase, MongoDB
+- **AI/LLM**: Google Gemini, Llama (via Groq), fallback dictionary
 - **Tools**: Cheerio (scraping), React Hook Form, Zod validation
 
 ## Project Structure
@@ -84,7 +86,26 @@ SUPABASE_SERVICE_ROLE_KEY=your-service-role-key
 
 # MongoDB
 MONGODB_URI=mongodb://localhost:27017/blog_summarizer
+
+# LLM Translation APIs (choose one or both)
+GEMINI_API_KEY=your-gemini-api-key
+GROQ_API_KEY=your-groq-api-key
 ```
+
+### Getting API Keys
+
+**Google Gemini API Key:**
+
+1. Go to [Google AI Studio](https://aistudio.google.com/)
+2. Create a new project or select existing
+3. Generate an API key
+4. Free tier includes generous limits
+
+**Groq API Key (for Llama):**
+
+1. Sign up at [Groq Console](https://console.groq.com/)
+2. Create a new API key
+3. Fast inference with free tier available
 
 ## Database Setup
 
